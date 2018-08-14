@@ -1,0 +1,22 @@
+{
+  "name": "sslstrip-nodejs",
+  "version": "1.0.0",
+  "description": "sslstrip by nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elity/sslstrip-nodejs.git"
+  },
+  "keywords": [
+    "sslstrip"
+  ],
+  "author": "Fighting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elity/sslstrip-nodejs/issues"
+  },
+  "homepage": "https://github.com/Elity/sslstrip-nodejs#readme"
+}
