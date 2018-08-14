@@ -183,7 +183,7 @@ class ProxyServer {
         body += chunk.toString('utf-8');
       });
       inputStream.on('end', () => {
-        let buf = new Buffer(this.modifyHtml(body), 'utf-8');
+        let buf = Buffer.from(this.modifyHtml(body), 'utf-8');
         // 处理完成后需要重新压缩，除非把响应头的content-encoding也修改掉
         zlib.gzip(buf, (err, result) => {
           response.end(result);
