@@ -6,16 +6,25 @@ sslstrip by nodejs
 
 ### 使用
 
-1.运行脚本
+1. 运行脚本
 
 ```bash
 npm run  start
 ```
 
-2.模拟中间人(MITM)
-然后设置浏览器的 http 代理为：`127.0.0.1:8081`
+2. 模拟中间人(MITM)
 
-3.按往常一样不以 https 打头，输入一个会自动 301 重定向到 https 的网站
+设置浏览器的 http 代理为：`127.0.0.1:8081`
+
+3. 实验
+
+按往常一样不以 https 打头，输入一个会自动 301 重定向到 https 的网站。
+
+开启了 HSTS 的网站，只对首次就被劫持的情况有效，参考[MDN HSTS](https://developer.mozilla.org/zh-CN/docs/Glossary/HSTS)
+
+4. 被劫持的现象
+
+目标网站没有正常跳转到 https，且控制台有被劫持后输出的自定义消息
 
 ### PS
 
