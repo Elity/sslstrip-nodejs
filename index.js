@@ -52,7 +52,6 @@ class ProxyServer {
           this.updateUrlMap(remoteResponse.headers.location);
           // 重定向的地址是当前请求地址对应的https地址，这种直接反向代理
           // 不然在客户端会不停重定向（虽然现代浏览器有限制无限重定向，但体验不好，会显示“无法打开网页”几秒钟）
-          console.log(remoteResponse.headers.location, request.url);
           if (remoteResponse.headers.location === request.url) {
             useSSL = this.shouldBeHttps(request);
             options = this.getRequestOptions(request, useSSL);
